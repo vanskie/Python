@@ -11,7 +11,7 @@ for number in _list1:
     position += 1
     if True in number:
         for check in range(number[0] + position, len(_list1), number[0]):
-           _list1[check] = [check, False] 
+           _list1[check] = [check, False]
 
 for plus in _list1:
     if True in plus:
