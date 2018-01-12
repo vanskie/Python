@@ -22,4 +22,5 @@ for number1 in range(1000, 900, -1):
 		else:
 			continue
 
+print(pali)
 print(max(pali))

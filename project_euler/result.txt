@@ -1,0 +1,22 @@
+Result of 2 000 000:
+
+delete =  1999997
+The len of _list1 =  148933
+The len of _list2 =  851067
+delete =  1999999
+The len of _list1 =  148932
+The len of _list2 =  851067
+
+ 142913828922
+1515688768.736833
+
+
+delete =  95
+The len of _list1 =  25
+The len of _list2 =  25
+delete =  99
+The len of _list1 =  24
+The len of _list2 =  25
+
+ 1060
+1515693290.396037

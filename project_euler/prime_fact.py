@@ -1,5 +1,7 @@
 import math
+import time
 
+time.time()
 factors = []
 primes = []
 a = math.sqrt(600851475143)
@@ -21,13 +23,14 @@ print(factors)
 #be any more factors after the square root of the number
 
 for number in factors:
-	for i in range(2,number+2):
+	for i in range(2,number+1):
 		if i != number and number % i == 0:
 			break
 		elif number == i:
 			primes.append(number)
 			break
-
 		
 		
+print(primes)	
 print(max(primes))
+print(60/time.time())
