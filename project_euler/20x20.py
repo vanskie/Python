@@ -33,12 +33,14 @@ for char in numstr:
         step += 1
         feed += char
         if step == 2:
-            _small.append(feed)
+            _small.append(int(feed))
             feed = ''
             step = 0
             if len(_small) == 20:
                 _list1.append(_small)
                 _small = []
+
+'''
 for y in range(0, 17):
     for x in range(0,17):
         #print(_list1[y][x], _list1[y+1][x+1], _list1[y+2][x+2], _list1[y+3][x+3], '\n')
@@ -46,6 +48,38 @@ for y in range(0, 17):
             product = int(_list1[y][x]) * int(_list1[y+1][x+1]) * int(_list1[y+2][x+2]) * int(_list1[y+3][x+3])
             print(int(_list1[y][x]) * int(_list1[y+1][x+1]) * int(_list1[y+2][x+2]) * int(_list1[y+3][x+3]))
             print(int(_list1[y][x]), int(_list1[y+1][x+1]), int(_list1[y+2][x+2]), int(_list1[y+3][x+3]))
+
+for y in range(0,20):
+    for x in range(0,20):
+        if x < 3:
+            moveRight = _list1[y][x] * _list1[y][x+1] * _list1[y][x+2] * _list1[y][3]
+            print('Moving right: ', 'x is' , x, 'y is',y , 'Numbers are:', _list1[y][x], _list1[y][x+1], _list1[y][x+2], _list1[y][x+3])
+            if moveRight > product:
+                product = moveRight
+'''
+
+for y in range(0,20):
+    for x in range(0,20):
+        if x < 17:
+            moveRight = _list1[y][x] * _list1[y][x+1] * _list1[y][x+2] * _list1[y][x+3]
+            #print(_list1[y][x], _list1[y][x+1], _list1[y][x+2], _list1[y][x+3])
+            if moveRight > product:
+                product = moveRight
+        if y < 17:
+            moveDown = _list1[y][x] * _list1[y+1][x] * _list1[y+2][x] * _list1[y+3][x]
+            #print(_list1[y][x], _list1[y+1][x], _list1[y+2][x], _list1[y+3][x])
+            if moveRight > product:
+                product = moveRight
+        if x < 17 and y < 17:
+            downRight = _list1[y][x] * _list1[y+1][x+1] * _list1[y+2][x+2] * _list1[y+3][x+3]
+            #print(_list1[y][x], _list1[y+1][x+1], _list1[y+2][x+2], _list1[y+3][x+3])
+            if downRight > product:
+                product = downRight
+        if x > 2 and y < 17:
+            downLeft = _list1[y][x] * _list1[y+1][x-1] * _list1[y+2][x-2] * _list1[y+3][x-3]
+            #print(_list1[y][x], _list1[y+1][x-1], _list1[y+2][x-2], _list1[y+3][x-3])
+            if downLeft > product:
+                product = downLeft
 
 print(product)
 
