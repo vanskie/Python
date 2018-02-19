@@ -1,0 +1,7 @@
+In Python you can define functions.
+In Python functions take in arguments when called.
+In Python when a function is called with arguments they go into the parameters.
+In Python you can write classes to model real life objects like cars.
+In Python Classes have functions but they're now called methods.
+In Python Classes, methods now have attributes for parameteres.
+In Python Classes, attributes have a prefix of self.attribute = attribute.
