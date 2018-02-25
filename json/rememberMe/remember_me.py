@@ -22,5 +22,17 @@ def greet_user():
     else:
         new_user()
         
-greet_user()
+def check_user():
+    if login_check():
+        print('Is this your username - {}'.format(login_check()))
+        choice = input('y/n: ')
+        if choice == 'y':
+            greet_user()
+        elif choice == 'n':
+            new_user()
+    else:
+        new_user()
+
+
+check_user()
 
